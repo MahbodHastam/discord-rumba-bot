@@ -9,6 +9,7 @@ require("dotenv").config()
 
 const { Client } = require("discord.js")
 const client = new Client()
+client.login(process.env.BOT_TOKEN)
 const CMD_PREFIX = "."
 
 const lyricsFinder = require("lyrics-finder")
@@ -82,5 +83,3 @@ client.on("message", async (message) => {
 		console.log(error)
 	}
 })
-
-client.login(process.env.BOT_TOKEN)
